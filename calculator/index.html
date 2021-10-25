@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="CalcControl">
+  <md-card flex="50" layout="column">
+
+    <md-card-title  >{{name}}</md-card-title>
+    <md-input-container>
+
+      <input ng-model="result" class="res" ng-keyup="checkEnter($event)" reg-exp-require="/^[0-9\+\.\-\*\/]*$/">
+    </md-input-container>
+    <md-content layout="row">
+      <md-button flex="25" class="md-fab" ng-click="addVal(7)">
+        7
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(8)">
+        8
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(9)">
+        9
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal('/')">
+        /
+      </md-button>
+    </md-content>
+    <md-content layout="row">
+      <md-button flex="25" class="md-fab" ng-click="addVal(4)">
+        4
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(5)">
+        5
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(6)">
+        6
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal('*')">
+        X
+      </md-button>
+    </md-content>
+    <md-content layout="row">
+      <md-button flex="25" class="md-fab" ng-click="addVal(1)">
+        1
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(2)">
+        2
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal(3)">
+        3
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal('-')">
+        -
+      </md-button>
+    </md-content>
+    <md-content layout="row">
+      <md-button flex="25" class="md-fab" ng-click="addVal(0)">
+        0
+      </md-button>
+      <md-button flex="25" class="md-fab  md-warn" ng-click="clear()">
+        AC
+      </md-button>
+      <md-button flex="25" class="md-fab  md-primary" ng-click="evaluate()">
+        =
+      </md-button>
+      <md-button flex="25" class="md-fab" ng-click="addVal('+')">
+        +
+      </md-button>
+    </md-content>
+
+
+
+  </md-card>
+
+</body>
+
+</html>
